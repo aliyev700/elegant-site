@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="index.html">
+
+        <button>back to index</button>
+    </a>
+    
+
+
+    <!-- <form class="max-w-2xl border mx-auto border-gray-200 shadow-2xs rounded-2xl p-10 "> 
+
+
+        
+        <input type="text" id="name" name="name" class="w-full-mb-4 p-3 border-gray-200 rounded-2xl outline-none" placeholder="enter product name">
+        
+        
+        <div >
+
+            <textarea  
+            id="desc" 
+            name="desc"
+            class=" resize-none   w-full-mb-4 p-3 border-gray-200 rounded-2xl outline-none" 
+            placeholder="enter product description"
+            ></textarea>
+        </div>
+
+        <div >
+
+            <input 
+            id="text" 
+            name="image"
+            class=" resize-none   w-full-mb-4 p-3 border-gray-200 rounded-2xl outline-none border-black-100" 
+            placeholder="enter product image url"
+            
+            />
+        </div>
+        
+        
+    </form>     -->
+
+
+
+    <!-- admin.html -->
+<form id="productForm" class="max-w-2xl border mx-auto p-10 mt-10">
+    <input type="text" id="name" placeholder="Enter product name" class="w-full mb-4 p-3 border rounded-lg">
+    <input type="text" id="price" placeholder="Enter product price" class="w-full mb-4 p-3 border rounded-lg">
+    <input type="text" id="image" placeholder="Enter product image URL" class="w-full mb-4 p-3 border rounded-lg">
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Add Product</button>
+  </form>
+  
+
+  <script>
+  const form = document.getElementById('productForm');
+  
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const price = document.getElementById('price').value;
+    const image = document.getElementById('image').value;
+    
+    // Получаем текущие продукты из localStorage
+    const products = JSON.parse(localStorage.getItem('products') || '[]');
+    
+    // Добавляем новый продукт
+    products.push({ name, price, image });
+    
+    // Сохраняем обратно
+    localStorage.setItem('products', JSON.stringify(products));
+    
+    alert('Product added!');
+    
+    // Очищаем форму
+    form.reset();
+  });
+  </script>
+  
+  
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html> 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+<h1 class="text-2xl font-bold mb-4">Admin Panel</h1>
+
+<form id="productForm" class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md space-y-4">
+
+  <input type="text" id="name" placeholder="Product Name" class="w-full p-3 border rounded-xl" required>
+  <input type="text" id="image" placeholder="Image URL" class="w-full p-3 border rounded-xl" required>
+  <input type="number" id="price" placeholder="Price" class="w-full p-3 border rounded-xl" required>
+
+  <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded-xl hover:bg-blue-600">Add Product</button>
+
+</form>
+
+<button onclick="location.href='index.html'" class="mt-6 w-full bg-green-500 text-white p-3 rounded-xl hover:bg-green-600">
+  Go to Products Page
+</button>
+
+<script>
+document.getElementById('productForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    // Получаем данные из формы
+    const product = {
+        name: document.getElementById('name').value,
+        image: document.getElementById('image').value,
+        price: document.getElementById('price').value
+    };
+
+    // Сохраняем в localStorage
+    const products = JSON.parse(localStorage.getItem('products') || '[]');
+    products.push(product);
+    localStorage.setItem('products', JSON.stringify(products));
+
+    alert('Карточка создана!');
+
+    // Очищаем форму
+    this.reset();
+});
+</script>
+
+</body>
+</html>

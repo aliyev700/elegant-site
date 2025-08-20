@@ -1,0 +1,110 @@
+body{
+
+    main{
+
+        font-family: "Lato", sans-serif;
+        max-width: 1500px;
+        margin: 0 auto;
+       
+        img{
+            position: relative;
+            display: flex;
+width: 1470px;
+height: 820px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+
+        }
+
+
+        .amazing-sound{
+            position: absolute;
+            top: 270px;
+            left: 900px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            
+
+            h1{
+                color: var(--Black-900, #121212);
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* Headline 1 */
+font-family: Poppins;
+font-size: 80px;
+font-style: normal;
+font-weight: 500;
+line-height: 84px; /* 105% */
+letter-spacing: -3px;
+            }
+
+            p{
+                color: var(--Black-900, #121212);
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* Body 1 */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 160% */
+            }
+
+            button{
+                color: white;
+                display: flex;
+padding: 12px 56px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+width: 220px;
+border-radius: 8px;
+background: var(--neutral-07100, #141718);
+            }
+           
+         
+            
+        }
+
+        .team-logos{
+            display: flex;
+            flex-direction: row;
+            gap: 110px;
+            margin-left: 70px;
+            margin-top: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .arrivals{
+            padding-left: 120px;
+            padding-right: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 90px;
+
+            h1{
+    
+                color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 44px; /* 110% */
+letter-spacing: -0.4px;
+
+            }
+
+
+            svg{
+                margin-top: 15px;
+             
+            }
+        }
+    }
+} 

@@ -1,0 +1,314 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import 'remixicon/fonts/remixicon.css';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body,
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: white;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+body header {
+  position: fixed;
+  background-color: white;
+  max-width: 1500px;
+  margin: 0 auto;
+  z-index: 1000;
+}
+body header .ad {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: black;
+  height: 48px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-left: 560px;
+  padding-right: 300px;
+}
+body header .ad p {
+  margin-top: 5px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  height: 20px;
+}
+body header .ad h5 {
+  margin-top: 3px;
+  text-align: center;
+  color: var(--Yellow, #ffa600);
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+body header .navbar {
+  background: linear-gradient(0deg, rgb(228, 173, 62) 0%, rgba(248, 184, 56, 0.64) 100%), #FFF;
+  width: 1500px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+}
+body header .navbar h1 {
+  margin-top: 43px;
+  margin-left: 200px;
+  color: #000;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+}
+body header .navbar ul {
+  margin-top: 35px;
+  margin-left: 247px;
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+body header .navbar ul li {
+  width: 109px;
+}
+body header .navbar ul i {
+  position: relative;
+  font-size: 25px;
+  top: 8px;
+  right: 1px;
+}
+body header .navbar img {
+  margin-top: 35px;
+  margin-left: 186px;
+}
+body header .navbar .icons {
+  margin-left: 315px;
+  margin-bottom: 5px;
+  gap: 1px;
+  width: 100px;
+}
+
+body main {
+  font-family: "Lato", sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+body main img {
+  position: relative;
+  display: flex;
+  width: 1470px;
+  height: 820px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+body main .amazing-sound {
+  position: absolute;
+  top: 270px;
+  left: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+body main .amazing-sound h1 {
+  color: var(--Black-900, #121212);
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline 1 */
+  font-family: Poppins;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 84px; /* 105% */
+  letter-spacing: -3px;
+}
+body main .amazing-sound p {
+  color: var(--Black-900, #121212);
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body 1 */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+body main .amazing-sound button {
+  color: white;
+  display: flex;
+  padding: 12px 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 220px;
+  border-radius: 8px;
+  background: var(--neutral-07100, #141718);
+}
+body main .team-logos {
+  display: flex;
+  flex-direction: row;
+  gap: 110px;
+  margin-left: 70px;
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+body main .arrivals {
+  padding-left: 120px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+body main .arrivals h1 {
+  color: #000;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px; /* 110% */
+  letter-spacing: -0.4px;
+}
+body main .arrivals svg {
+  margin-top: 15px;
+}/*# sourceMappingURL=style.css.map */
